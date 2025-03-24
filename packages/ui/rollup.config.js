@@ -4,6 +4,8 @@ import swc from 'rollup-plugin-swc3'
 import postcss from 'rollup-plugin-postcss'
 import dts from 'rollup-plugin-dts'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import tailwindcssPostcss from '@tailwindcss/postcss'
+import { createTheme } from '@bat-ui/plugins'
 
 export default [
   {
@@ -20,7 +22,7 @@ export default [
       },
       { file: 'lib/index.cjs.js', format: 'cjs', sourcemap: true }
     ],
-    external: ['react', 'react-dom'],
+
     plugins: [
       peerDepsExternal(),
       nodeResolve({
@@ -29,10 +31,15 @@ export default [
       }),
       commonjs(),
       postcss({
-        config: {
-          path: './postcss.config.ts'
-        },
+        plugins: [
+          tailwindcssPostcss(),
+          createTheme({
+            outputDir: './lib',
+            createAll: true
+          })
+        ],
         extract: 'index.css',
+        sourceMap: true,
         extensions: ['.css']
       }),
       swc({
@@ -55,10 +62,10 @@ export default [
         module: {
           type: 'es6'
         },
-
         minify: true
       })
-    ]
+    ],
+    external: ['react', 'react-dom']
   },
   {
     input: 'src/index.ts',
