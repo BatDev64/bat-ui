@@ -3,30 +3,29 @@
   "version": "0.0.0",
   "type": "module",
   "description": "",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
-  "style": "dist/index.css",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "style": "lib/index.css",
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
-      "types": "./dist/index.d.ts"
+      "import": "./lib/index.esm.js",
+      "require": "./lib/index.cjs.js",
+      "types": "./lib/index.d.ts"
     },
-    "./styles": {
-      "import": "./dist/index.css",
-      "require": "./dist/index.css",
-      "types": "./dist/index.d.ts"
-    }
+    "./styles": "./lib/index.css",
+    "./tailwind-theme": "./lib/tailwind-theme.css",
+    "./css-theme": "./lib/css-theme.css"
   },
   "scripts": {
-    "watch": "rollup -c --watch ",
-    "build": "rollup -c && rollup -c rollup.config.js"
+    "watch": "rollup -c --watch && rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@bat-ui/plugins": "workspace:*",
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-swc": "^0.4.0",
