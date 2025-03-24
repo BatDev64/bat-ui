@@ -10,7 +10,7 @@ export default [
     input: 'src/index.ts',
     output: [
       {
-        file: 'dist/index.esm.js',
+        file: 'lib/index.esm.js',
         format: 'esm',
         sourcemap: true,
         globals: {
@@ -18,7 +18,7 @@ export default [
           'react-dom': 'ReactDOM'
         }
       },
-      { file: 'dist/index.cjs.js', format: 'cjs', sourcemap: true }
+      { file: 'lib/index.cjs.js', format: 'cjs', sourcemap: true }
     ],
     external: ['react', 'react-dom'],
     plugins: [
@@ -62,7 +62,7 @@ export default [
   },
   {
     input: 'src/index.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    output: [{ file: 'lib/index.d.ts', format: 'esm' }],
     plugins: [dts()],
     external: [/\.css$/]
   }
