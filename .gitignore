@@ -6,9 +6,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+pnpm-debug.log*
 
 node_modules
 dist
+lib
 dist-ssr
 *.local
 
@@ -22,3 +24,17 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# generated types
+.astro/
+
+
+
+# environment variables
+.env
+.env.production
+
+# jetbrains setting folder
+.idea/
+
+*storybook.log
