@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "description": "",
   "packageManager": "pnpm@9.12.2",
-  "scripts": {
-    
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@biomejs/biome": "1.9.4"
+    "@biomejs/biome": "1.9.4",
+    "vitest": "^3.0.9"
   }
 }
