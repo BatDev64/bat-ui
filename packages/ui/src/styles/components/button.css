@@ -1,3 +1,22 @@
-.button {
-    @apply bg-amber-500;
+@layer components {
+  .button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border: 1px solid;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    gap: calc(var(--spacing) * 1);
+  }
+}
+
+@layer components {
+  @button-variants solid-(primary,secondary,success,danger,info,warn);
+  @button-variants outline-(primary,secondary,success,danger,info,warn);
+  @button-variants ghost-(primary,secondary,success,danger,info,warn);
+  @button-variants link-(primary,secondary,success,danger,info,warn);
 }
