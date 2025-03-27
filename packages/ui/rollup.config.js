@@ -5,7 +5,8 @@ import postcss from 'rollup-plugin-postcss'
 import dts from 'rollup-plugin-dts'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import tailwindcssPostcss from '@tailwindcss/postcss'
-import { createTheme } from '@bat-ui/plugins'
+import postcssImport from 'postcss-import'
+import { createTheme, colorUtils } from '@bat-ui/plugins'
 
 export default [
   {
@@ -32,12 +33,15 @@ export default [
       commonjs(),
       postcss({
         plugins: [
+          postcssImport(),
+          colorUtils(),
           tailwindcssPostcss(),
           createTheme({
             outputDir: './lib',
             createAll: true
           })
         ],
+        /* minimize: true, */
         extract: 'index.css',
         sourceMap: true,
         extensions: ['.css']
