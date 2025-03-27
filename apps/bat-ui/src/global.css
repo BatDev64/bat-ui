@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "@bat-ui/ui/tailwind-theme";
+@import "@bat-ui/ui/styles";
+
+@theme {
+  /* --color-primary-500: red; */
+}
