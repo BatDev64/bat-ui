@@ -26,6 +26,7 @@
   "license": "ISC",
   "devDependencies": {
     "@bat-ui/plugins": "workspace:*",
+    "@radix-ui/react-slot": "^1.1.2",
     "@react-aria/button": "^3.12.1",
     "@react-aria/interactions": "^3.24.1",
     "@react-aria/utils": "^3.28.1",

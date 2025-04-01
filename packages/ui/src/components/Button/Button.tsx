@@ -1,8 +1,7 @@
 import { useButton, type AriaButtonProps } from '@react-aria/button'
 import { useHover } from '@react-aria/interactions'
 import { mergeProps } from '@react-aria/utils'
-import { cva, type VariantProps } from 'class-variance-authority'
-import { Slot } from '../Slot/Slot'
+import { Root as Slot } from '@radix-ui/react-slot'
 import { cn } from '../../utils/cn'
 import { useRef } from 'react'
 
