@@ -5,6 +5,9 @@ export const solid = {
     { prop: '--btn-bg-active', value: `var(--color-${color}-800)` },
     { prop: '--btn-border-focus', value: `var(--color-${color}-700)` },
     { prop: '--btn-bg-disabled', value: `var(--color-${color}-300)` },
+    { prop: '--btn-text', value: 'var(--color-white)' },
+
+    { prop: 'color', value: 'var(--btn-text)' },
     { prop: 'background-color', value: 'var(--btn-bg)' },
     {
       selector: '&[data-hover=true]',
@@ -28,7 +31,14 @@ export const solid = {
     { prop: '--btn-bg-hover', value: `var(--color-${color}-500)` },
     { prop: '--btn-bg-active', value: `var(--color-${color}-600)` },
     { prop: '--btn-border-focus', value: `var(--color-${color}-500)` },
-    { prop: '--btn-bg-disabled', value: `var(--color-${color}-800)` },
+    {
+      prop: '--btn-bg-disabled',
+      value: `var(--color-${color}-500)`
+      /* value: `--alpha(var(--color-${color}-950) / 95%)` */
+    },
+    { prop: '--btn-text', value: 'var(--color-black)' },
+    { prop: '--btn-text-disabled', value: `var(--color-${color}-300)` },
+    { prop: 'color', value: 'var(--btn-text)' },
     { prop: 'background-color', value: 'var(--btn-bg)' },
     {
       selector: '&[data-hover=true]',
@@ -44,7 +54,10 @@ export const solid = {
     },
     {
       selector: '&[data-disabled=true]',
-      nodes: [{ prop: 'background-color', value: 'var(--btn-bg-disabled)' }]
+      nodes: [
+        { prop: 'background-color', value: 'var(--btn-bg-disabled)' },
+        { prop: 'color', value: 'var(--btn-text-disabled)' }
+      ]
     }
   ]
 }

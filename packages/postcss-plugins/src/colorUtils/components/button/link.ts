@@ -25,10 +25,13 @@ export const link = {
   ],
   dark: (color: string) => [
     { prop: '--btn-text', value: `var(--color-${color}-400)` },
-    { prop: '--btn-text-hover', value: `var(--color-${color}-500)` },
-    { prop: '--btn-text-active', value: `var(--color-${color}-600)` },
+    { prop: '--btn-text-hover', value: `var(--color-${color}-600)` },
+    { prop: '--btn-text-active', value: `var(--color-${color}-800)` },
     { prop: '--btn-text-focus', value: `var(--color-${color}-500)` },
-    { prop: '--btn-text-disabled', value: `var(--color-${color}-800)` },
+    {
+      prop: '--btn-text-disabled',
+      value: `--alpha(var(--color-${color}-950) / 95%)`
+    },
     { prop: 'color', value: 'var(--btn-text)' },
     {
       selector: '&[data-hover=true]',
