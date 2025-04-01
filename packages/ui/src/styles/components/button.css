@@ -1,16 +1,19 @@
 @layer components {
   .button-base {
+    /* min-width: 0; */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+    overflow: hidden;
     border: 1px solid;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s;
     text-align: center;
     text-decoration: none;
     outline: none;
-    gap: calc(var(--spacing) * 1);
+    gap: calc(var(--spacing) * 2);
   }
 }
 
@@ -19,4 +22,5 @@
   @button-variants outline-(primary,secondary,success,danger,info,warn);
   @button-variants ghost-(primary,secondary,success,danger,info,warn);
   @button-variants link-(primary,secondary,success,danger,info,warn);
+  @button-variants flat-(primary,secondary,success,danger,info,warn);
 }
