@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "watch": "rollup -c --watch && rollup -c rollup.config.js",
+    "dev": "rollup -c --watch && rollup -c rollup.config.js",
     "build": "rollup -c rollup.config.js",
     "test": "vitest --typecheck"
   },
