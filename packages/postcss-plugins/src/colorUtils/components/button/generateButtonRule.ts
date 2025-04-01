@@ -1,4 +1,5 @@
 import type { ButtonVariants } from '../../../types/types'
+import { flat } from './flat'
 import { ghost } from './ghost'
 import { link } from './link'
 import { outline } from './outline'
@@ -8,7 +9,8 @@ export const styleGenerators = {
   solid,
   outline,
   ghost,
-  link
+  link,
+  flat
 }
 
 export const generateButtonRule = (variant: ButtonVariants, color: string) => {

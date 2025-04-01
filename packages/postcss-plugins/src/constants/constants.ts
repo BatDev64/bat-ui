@@ -1,1 +1,7 @@
-export const ALLOWED_VARIANTS = ['solid', 'outline', 'ghost', 'link'] as const
+export const ALLOWED_VARIANTS = [
+  'solid',
+  'outline',
+  'flat',
+  'ghost',
+  'link'
+] as const
