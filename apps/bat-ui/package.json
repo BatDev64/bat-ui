@@ -18,8 +18,10 @@
   "devDependencies": {
     "@bat-ui/ui": "workspace:*",
     "@chromatic-com/storybook": "^3",
+    "@storybook/addon-a11y": "^8.6.10",
     "@storybook/addon-essentials": "^8.6.7",
     "@storybook/addon-onboarding": "^8.6.7",
+    "@storybook/addon-themes": "^8.6.10",
     "@storybook/blocks": "^8.6.7",
     "@storybook/experimental-addon-test": "^8.6.7",
     "@storybook/react": "^8.6.7",
@@ -34,6 +36,7 @@
     "globals": "^15.15.0",
     "playwright": "^1.51.1",
     "storybook": "^8.6.7",
+    "storybook-dark-mode": "^4.0.2",
     "tailwindcss": "^4.0.14",
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
