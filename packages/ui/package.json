@@ -18,7 +18,7 @@
     "./css-theme": "./lib/css-theme.css"
   },
   "scripts": {
-    "watch": "rollup -c --watch && rollup -c rollup.config.js",
+    "dev": "rollup -c --watch && rollup -c rollup.config.js",
     "build": "rollup -c rollup.config.js"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "@bat-ui/plugins": "workspace:*",
     "@radix-ui/react-slot": "^1.1.2",
     "@react-aria/button": "^3.12.1",
+    "@react-aria/focus": "^3.20.1",
     "@react-aria/interactions": "^3.24.1",
     "@react-aria/utils": "^3.28.1",
     "@rollup/plugin-commonjs": "^28.0.3",
