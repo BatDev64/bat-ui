@@ -1,0 +1,12 @@
+@layer components {
+  .bat-ui-spinner {
+    --color-spinner: var(--color-white);
+    &:where([data-theme="dark"], [data-theme="dark"] *) {
+      --color-spinner: var(--color-black);
+    }
+    &:where(.dark, .dark *) {
+      --color-spinner: var(--color-black);
+    }
+    @apply w-4 h-4 border-2 border-black/15 dark:border-white/15 border-l-(--color-spinner) dark:border-l-(--color-spinner) rounded-full animate-spin;
+  }
+}
