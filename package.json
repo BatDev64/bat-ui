@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "description": "",
   "packageManager": "pnpm@9.12.2",
-  "scripts": {},
+  "scripts": {
+	"build/packages": "turbo run build --filter=@bat-ui/plugins  --filter=@bat-ui/ui",
+	"dev/packages": "turbo run dev --filter=@bat-ui/ui --filter=@bat-ui/plugins"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "turbo": "^2.4.4",
     "vitest": "^3.0.9"
   }
 }
